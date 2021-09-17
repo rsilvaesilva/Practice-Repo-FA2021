@@ -1,0 +1,91 @@
+---
+title: "Introduction to Data Science - HW 2"
+author: "Renato Silva e Silva - `rsilvaesilva1664@floridapoly.edu`"
+output: html_notebook
+---
+
+# Problem 1 (30 points)
+
+During class you completed an activity in which you practiced `git` commands and operations (such as forking a repository, cloning it using `git clone`, and uploading changes using `git push`).
+
+In this exercise you are asked to modify the `flpoly_student.md` file you worked during class, and format it using the **markdown** tools discussed in class. You must **create a table** that shows the courses you are currently enrolled in, using for the headers of the table: 
+
+- Prefix: in bold letters (such as **COP**)
+- Number: in bold letters (such as **2073**)
+- Name: in italics (such as _Introduction to Data Science_)
+- Credits (such as 3)
+
+a. Make sure your GitHub repo (`practice-repo/`) shows the results of your updated file (remember to use the commands `git add .` , `git commit -m "YOUR MESSAGE"`, and `git push`) 
+
+b. Include a link to your GitHub repo in this document.
+[Link to Github](https://github.com/sturtevantgrace/practice-repo/blob/main/flpoly_student.md)
+
+c. Take a screenshot of the GitHub repo, add the screenshot file to the repo, and include it in this document (review how to insert a picture using markdown)
+[Class Table Screenshot](https://github.com/sturtevantgrace/practice-repo/blob/main/Class%20Table.png)
+
+# Problem 2 (30 points)
+
+For this problem, you are asked to create a list of **3 concepts** you have learned about so far this semester. Include the name of the course as a sub-heading (that is, using `##`), and the concepts as an unordered list. Include a link to information about at least one of the concept you listed (for example a link to the Wikipedia page about that concept/topics).
+
+# Concepts learned this semster 
+## Calculus 
+- [limits](https://en.wikipedia.org/wiki/Limit_%28mathematics%29)
+- [derivatives](https://en.wikipedia.org/wiki/Derivative)
+
+## Data Sceicne
+- [how to code is R](https://en.wikipedia.org/wiki/RStudio)
+
+
+
+# Problem 3 (40 points)
+
+In this problem you will practice some basic R operations. Include solutions to each items by inserting a new R chunk of code (make sure you run the chunk so that the output is displayed)
+
+(a) Create a variable called `my_name` that contains your preferred name.
+
+```{r}
+make_full_name <- function(first_name, last_name) {
+  full_name <- paste(first_name, last_name)
+  full_name
+}
+my_name <- make_full_name("Renato", "Silva e Silva")
+print(my_name)
+```
+
+(b) Create a variable called `name_length` that holds how many letters are in `my_name`.
+
+```{r}
+name_length <- nchar(my_name)
+print(name_length)
+```
+
+(c) Show which value is bigger: $e^\pi$ or $\pi^e$. 
+
+```{r}
+e <-  2.71875
+e^pi > pi^e
+# e^pi is bigger because the string returns true
+````
+
+(d) Define a function called `add_three` that takes a single argument and returns a value with 3 units added to the original input.
+
+```{r}
+add_three <- round(3.28376489 + 3)
+print(add_three)
+
+```
+
+(e) Use the colon operator `:` to create a vector `v` of numbers from 10 to 49. Find the length of this vector using the `length()` function.
+
+```{r}
+vector <- 10:49
+length(vector)
+```
+
+(f) Use the `seq()` function to produce a range of number from -5 to 10 in 0.5 increments.
+
+```{r}
+seq(-5, 10, 0.5)
+```
+
+
